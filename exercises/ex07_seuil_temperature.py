@@ -3,9 +3,8 @@
 
 alarm_threshold = 80
 warning_threshold = 70
-temp = float(input("Enter temperature : "))
 
-def alarm_status(temp: float) -> str:
+def temperature_status(temp: float) -> str:
 	if temp > alarm_threshold :
 		return "ALARME"
 	elif temp > warning_threshold :
@@ -15,4 +14,6 @@ def alarm_status(temp: float) -> str:
 
 
 
-print(f"Température : {temp} °C -> {alarm_status(temp)}")
+if __name__ == "__main__":
+    temp = float(input("Enter temperature : "))
+    print(f"Température : {temp} °C -> {temperature_status(temp)}")
