@@ -12,6 +12,8 @@ def pareto(stops: dict[str,int]):
 	result=[]
 	cumulative = 0
 	total = sum(stops.values())
+	if total ==0:
+		return []
 	for cause, stop_duration in ranked:
 		
 		share = stop_duration/total
